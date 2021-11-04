@@ -2,9 +2,9 @@ direction = 'up'
 map_horizontal = 0
 map_vertical = 0
 function love.draw()
-    for i = 0, love.graphics.getWidth() / background:getWidth() do
-        for j = 0, love.graphics.getHeight() / background:getHeight() do
-            love.graphics.draw(background, i * background:getWidth() + map_horizontal, j * background:getHeight() + map_vertical)
+    for i = 0, 5 do
+        for j = 0, 5 do
+            love.graphics.draw(background, -2000 + i * background:getWidth() + map_horizontal, -2000 + j * background:getHeight() + map_vertical)
         end
     end
     -- Theres probably a better way to do this, but it doesn't seem to affect performance/memory usage
