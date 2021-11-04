@@ -1,7 +1,7 @@
 name: LoveBuild
 on:
   push:
-    branches: [ master ]
+    branches: [ main ]
 jobs:
   build-bug:
     runs-on: ubuntu-latest
