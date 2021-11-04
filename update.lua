@@ -3,7 +3,6 @@ function love.update(dt)
     height = love.graphics.getHeight()
 
     if love.keyboard.isDown('right') or love.keyboard.isDown('d') then
-        print(map_horizontal)
         direction = 'right'
         map_horizontal = map_horizontal - 100 * dt
     elseif love.keyboard.isDown('left') or love.keyboard.isDown('a') then
