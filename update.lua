@@ -2,34 +2,18 @@ function love.update(dt)
     width = love.graphics.getWidth()
     height = love.graphics.getHeight()
 
-    if love.keyboard.isDown("right") then
+    if love.keyboard.isDown('right') or love.keyboard.isDown('d') then
+        print(map_horizontal)
         direction = 'right'
-        if x >= width - 60 then
-            x = x
-        else
-            x = x + 100 * dt
-        end
-    elseif love.keyboard.isDown("left") then
+        map_horizontal = map_horizontal - 100 * dt
+    elseif love.keyboard.isDown('left') or love.keyboard.isDown('a') then
         direction = 'left'
-        if x <= 0 then
-            x = x
-        else
-            x = x - 100 * dt
-        end
-    elseif love.keyboard.isDown("down") then
+        map_horizontal = map_horizontal + 100 * dt
+    elseif love.keyboard.isDown('down') or love.keyboard.isDown('s') then
         direction = 'down'
-        if y >= height - 60 then
-            y = y
-        else
-            y = y + 100 * dt
-        end
-    elseif love.keyboard.isDown("up") then
+        map_vertical = map_vertical - 100 * dt
+    elseif love.keyboard.isDown('up') or love.keyboard.isDown('w') then
         direction = 'up'
-        print(y)
-        if y <= 0 then
-            y = y
-        else
-            y = y - 100 * dt
-        end
+        map_vertical = map_vertical + 100 * dt
     end
 end
