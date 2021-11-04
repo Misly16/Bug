@@ -12,7 +12,6 @@ jobs:
       with:
         app_name: 'Bug'
         love_version: '11.3'
-        source_dir: '/'
     - uses: actions/upload-artifact@v1
       with:
         name: hw_macos-build
