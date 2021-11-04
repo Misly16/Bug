@@ -4,7 +4,6 @@ function love.update(dt)
 
     if love.keyboard.isDown("right") then
         direction = 'right'
-        print(x)
         if x >= width - 60 then
             x = x
         else
